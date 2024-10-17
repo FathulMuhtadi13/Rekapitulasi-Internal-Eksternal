@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import numpy as np
+import streamlit_aggrid as st_aggrid
 
 # Function to load the Excel file
 def load_data(file):
@@ -58,11 +58,12 @@ def main():
 
             # Apply filters
             filtered_df = df[
-                (df['Due Date'].between(*due_date_range)) &
-                (df['Tgl Closing'].between(*closing_date_range)) &
                 (df['Finding Category'].isin(finding_category)) &
                 (df['Finding Status'].isin(finding_status)) &
-                (df['Area'].isin(area))
+                (df['Area'].isin(area)) &
+                # Include logic to retain data if either date column has valid entries
+                ((df['Due Date'].between(*due_date_range) | df['Due Date'].isna()) |
+                 (df['Tgl Closing'].between(*closing_date_range) | df['Tgl Closing'].isna()))
             ]
 
             # Show filtered data
@@ -82,10 +83,8 @@ def main():
                                color="Finding Category", barmode='group')
             st.plotly_chart(fig)
 
-            # Editable Data Table (this requires the st-aggrid library)
+            # Editable Data Table
             st.subheader("Edit Data")
-            import streamlit_aggrid as st_aggrid
-
             grid_response = st_aggrid.aggrid(
                 filtered_df,
                 editable=True,
