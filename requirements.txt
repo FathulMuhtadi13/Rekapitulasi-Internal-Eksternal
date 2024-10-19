@@ -1,4 +1,6 @@
-pandas==2.2.3
-plotly==5.24.1
-XlsxWriter==3.2.0
-streamlit-aggrid==1.0.5
+streamlit==1.21.0
+pandas==1.5.3
+plotly==5.14.0
+st-aggrid==0.2.3
+openpyxl==3.0.10
+xlsxwriter==3.0.2
