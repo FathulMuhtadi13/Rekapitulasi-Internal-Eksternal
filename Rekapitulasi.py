@@ -91,7 +91,7 @@ def create_tornado_chart(findings_grouped):
 
 # Main function for the Streamlit application
 def main():
-    st.title("Monitoring Tindak Lanjut Audit ISO Internal & Eksternal RECARE 2023")
+    st.title("Monitoring Tindak Lanjut Audit ISO Internal & Eksternal RECARE 2024")
 
     # Custom CSS untuk mengatur gaya judul
     st.markdown(
@@ -174,17 +174,17 @@ def main():
                 "background-color": "#ffffff !important"
             },
             ".ag-header-cell": {
-                "font-size": "30px",
+                "font-size": "25px",
                 "font-family": "Calibri, sans-serif",
                 "white-space": "normal",
-                "max-width": "300px",
+                "max-width": "250px",
                 "overflow": "hidden",
                 "text-overflow": "ellipsis"
             },
             ".ag-cell": {
                 "white-space": "normal !important",
                 "word-wrap": "break-word !important",
-                "max-width": "250px",
+                "max-width": "200px",
                 "overflow": "hidden",
                 "text-overflow": "ellipsis"
             }
