@@ -9,7 +9,7 @@ import os
 
 # Set page configuration
 st.set_page_config(
-    page_title="Monitoring Tinlan Audit ISO In. & Eks. RECARE 2024",
+    page_title="Monitoring Tindak Lanjut Audit ISO In. & Eks. RECARE 2024",
     layout="wide"
 )
 
@@ -24,7 +24,7 @@ with col1:
         st.error(f"File tidak ditemukan: {image_path}")
 
 with col2:
-    st.title("Monitoring Tinlan Audit ISO In. & Eks. RECARE 2024")
+    st.title("Monitoring Tindak Lanjut Audit ISO In. & Eks. RECARE 2024")
     
 # Custom CSS untuk mengatur gaya judul
 st.markdown(
