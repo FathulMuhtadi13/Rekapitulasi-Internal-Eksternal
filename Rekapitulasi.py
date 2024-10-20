@@ -13,7 +13,7 @@ st.set_page_config(
     layout="wide"
 )
 
-image_path = "images/logo.png"
+image_path = "logo.png"
 col1, col2 = st.columns([1, 5])
 
 with col1:
