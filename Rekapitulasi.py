@@ -23,7 +23,7 @@ with col1:
         st.error(f"File tidak ditemukan: {image_path}")  # Menampilkan pesan kesalahan jika file tidak ditemukan
 
 with col2:
-    st.title("Monitoring Tindak Lanjut Audit ISO Internal & Eksternal RECARE 2024")
+    st.title("Monitoring Tinlan Audit ISO Internal & Eksternal RECARE 2024")
     
 # Custom CSS untuk mengatur gaya judul
 st.markdown(
