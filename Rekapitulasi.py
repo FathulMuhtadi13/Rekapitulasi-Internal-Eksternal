@@ -9,7 +9,7 @@ import os
 
 # Set page configuration
 st.set_page_config(
-    page_title="Monitoring Tinlan Audit ISO Internal & Eksternal RECARE 2024",
+    page_title="Monitoring Tinlan Audit ISO In. & Eks. RECARE 2024",
     layout="wide"
 )
 
