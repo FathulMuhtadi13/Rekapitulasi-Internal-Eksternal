@@ -6,12 +6,13 @@ from datetime import datetime
 import io
 import xlsxwriter
 
+# Set page configuration at the start
+st.set_page_config(page_title="Monitoring Tindak Lanjut Audit ISO Internal & Eksternal RECARE 2024", layout="wide")
 
 # Function to load data from an Excel file
 def load_data(file):
     try:
         df = pd.read_excel(file, sheet_name=0)
-         st.set_page_config(page_title="Monitoring Tindak Lanjut Audit ISO Internal & Eksternal RECARE 2024", layout="wide")
         return df
     except Exception as e:
         st.error(f"Error loading data: {e}")
