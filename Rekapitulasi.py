@@ -5,6 +5,7 @@ from st_aggrid import AgGrid, GridOptionsBuilder, DataReturnMode, GridUpdateMode
 from datetime import datetime
 import io
 import xlsxwriter
+import os
 
 # Set page configuration
 st.set_page_config(
@@ -12,13 +13,18 @@ st.set_page_config(
     layout="wide"
 )
 
-# Set up the columns for the image and the title
+image_path = "images/logo.png"
 col1, col2 = st.columns([1, 5])
+
 with col1:
-    st.image("D:/07. Project Rekayasa Engineering/011. Minggu 11 19 Oktober 2024/logo.png", use_column_width=True)
+    if os.path.exists(image_path):
+        st.image(image_path, use_column_width=True)
+    else:
+        st.error(f"File tidak ditemukan: {image_path}")  # Menampilkan pesan kesalahan jika file tidak ditemukan
+
 with col2:
     st.title("Monitoring Tindak Lanjut Audit ISO Internal & Eksternal RECARE 2024")
-
+    
 # Custom CSS untuk mengatur gaya judul
 st.markdown(
     """
