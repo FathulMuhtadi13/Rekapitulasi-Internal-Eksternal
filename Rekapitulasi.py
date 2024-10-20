@@ -91,7 +91,7 @@ def create_tornado_chart(findings_grouped):
 
 # Main function for the Streamlit application
 def main():
-    st.title("Monitoring Tindak Lanjut Audit ISO Internal & Eksternal RECARE 2024")
+    st.title("Monitoring Tindak Lanjut Audit ISO Internal & Eksternal RECARE 2023")
 
     # Custom CSS untuk mengatur gaya judul
     st.markdown(
@@ -161,34 +161,37 @@ def main():
         gb.configure_grid_options(pagination=True, paginationPageSize=10, enableFilter=True, rowHeight=40)
 
         custom_css = {
-            ".ag-row": {
-                "font-size": "20px !important",
-                "font-family": "Calibri, sans-serif !important",
-                "white-space": "normal !important",
-                "word-wrap": "break-word !important"
-            },
-            ".ag-row:nth-child(even)": {
-                "background-color": "#e8fbff !important"
-            },
-            ".ag-row:nth-child(odd)": {
-                "background-color": "#ffffff !important"
-            },
-            ".ag-header-cell": {
-                "font-size": "25px",
-                "font-family": "Calibri, sans-serif",
-                "white-space": "normal",
-                "max-width": "250px",
-                "overflow": "hidden",
-                "text-overflow": "ellipsis"
-            },
-            ".ag-cell": {
-                "white-space": "normal !important",
-                "word-wrap": "break-word !important",
-                "max-width": "200px",
-                "overflow": "hidden",
-                "text-overflow": "ellipsis"
-            }
-        }
+    ".ag-row": {
+        "font-size": "20px !important",
+        "font-family": "Calibri, sans-serif !important",
+        "white-space": "normal !important",
+        "word-wrap": "break-word !important"
+    },
+    ".ag-row:nth-child(even)": {
+        "background-color": "#e8fbff !important"
+    },
+    ".ag-row:nth-child(odd)": {
+        "background-color": "#ffffff !important"
+    },
+    ".ag-header-cell": {
+        "font-size": "24px !important",  # Set the header font size
+        "font-family": "Calibri, sans-serif !important",  # Set the header font family
+        "white-space": "normal !important",  # Allow the text to wrap
+        "word-wrap": "break-word !important",  # Enable word wrapping
+        "overflow": "visible !important",  # Ensure the header text is not clipped
+        "text-overflow": "ellipsis",  # Optional: use ellipsis for overflow
+        "line-height": "1.2 !important",  # Adjust line height for better readability
+        "height": "auto !important"  # Allow height to adjust based on content
+    },
+    ".ag-cell": {
+        "white-space": "normal !important",
+        "word-wrap": "break-word !important",
+        "max-width": "250px",
+        "overflow": "hidden",
+        "text-overflow": "ellipsis"
+    }
+}
+
 
         grid_options = gb.build()
         grid_response = AgGrid(
