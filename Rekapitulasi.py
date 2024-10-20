@@ -7,7 +7,6 @@ import io
 import xlsxwriter
 import os
 
-# Set page configuration
 st.set_page_config(
     page_title="Monitoring Tindak Lanjut Audit ISO In. & Eks. RECARE 2024",
     layout="wide"
@@ -24,20 +23,14 @@ with col1:
         st.error(f"File tidak ditemukan: {image_path}")
 
 with col2:
-    st.title("Monitoring Tindak Lanjut Audit ISO In. & Eks. RECARE 2024")
-    
-# Custom CSS untuk mengatur gaya judul
-st.markdown(
-    """
-    <style>
-    h1 {
-        font-weight: 400 !important; /* Mengatur font-weight menjadi normal */
-        font-family: Calibri, sans-serif; /* Mengatur jenis font */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+    st.markdown(
+        """
+        <h2 style='font-size:24px; margin-top: 0;'>
+            Monitoring Tindak Lanjut Audit ISO In. & Eks. RECARE 2024
+        </h2>
+        """, 
+        unsafe_allow_html=True
+    )
 
 # Function to load data from an Excel file
 def load_data(file):
