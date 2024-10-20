@@ -26,7 +26,7 @@ with col2:
     st.markdown(
         """
         <h2 style='font-size:24px; margin-top: 0;'>
-            Monitoring Tindak Lanjut Audit ISO In. & Eks. RECARE 2024
+            Monitoring Tindak Lanjut Audit ISO Internal & Eksternal RECARE 2024
         </h2>
         """, 
         unsafe_allow_html=True
