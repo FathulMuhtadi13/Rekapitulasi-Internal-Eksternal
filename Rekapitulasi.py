@@ -6,8 +6,31 @@ from datetime import datetime
 import io
 import xlsxwriter
 
-# Set page configuration at the start
-st.set_page_config(page_title="Monitoring Tindak Lanjut Audit ISO Internal & Eksternal RECARE 2024", layout="wide")
+# Set page configuration
+st.set_page_config(
+    page_title="Monitoring Tindak Lanjut Audit ISO Internal & Eksternal RECARE 2024",
+    layout="wide"
+)
+
+# Set up the columns for the image and the title
+col1, col2 = st.columns([1, 5])
+with col1:
+    st.image("D:/07. Project Rekayasa Engineering/011. Minggu 11 19 Oktober 2024/logo.png", use_column_width=True)
+with col2:
+    st.title("Monitoring Tindak Lanjut Audit ISO Internal & Eksternal RECARE 2024")
+
+# Custom CSS untuk mengatur gaya judul
+st.markdown(
+    """
+    <style>
+    h1 {
+        font-weight: 400 !important; /* Mengatur font-weight menjadi normal */
+        font-family: Calibri, sans-serif; /* Mengatur jenis font */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Function to load data from an Excel file
 def load_data(file):
@@ -91,7 +114,7 @@ def create_tornado_chart(findings_grouped):
 
 # Main function for the Streamlit application
 def main():
-    st.title("Monitoring Tindak Lanjut Audit ISO Internal & Eksternal RECARE 2023")
+    
 
     # Custom CSS untuk mengatur gaya judul
     st.markdown(
