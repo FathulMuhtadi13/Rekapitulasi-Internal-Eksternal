@@ -25,9 +25,11 @@ with col1:
 with col2:
     st.markdown(
         """
-        <h2 style='font-size:24px; margin-top: 0;'>
-            Monitoring Tindak Lanjut Audit ISO Internal & Eksternal RECARE 2024
-        </h2>
+        <div style='display: flex; align-items: center; justify-content: center; height: 100%;'>
+            <h2 style='font-size:24px; margin: 0;'>
+                Monitoring Tindak Lanjut Audit ISO In. & Eks. RECARE 2024
+            </h2>
+        </div>
         """, 
         unsafe_allow_html=True
     )
