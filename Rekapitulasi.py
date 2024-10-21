@@ -64,7 +64,7 @@ def create_tornado_chart(findings_grouped):
             text=filtered_df['Count'],
             textposition='inside',
             textfont=dict(
-                size=24,  # Set the size of the text (value) on the chart
+                size=20,  # Set the size of the text (value) on the chart
                 color='black'  # Optional: Set text color for better visibility
             ),
             marker=dict(
@@ -99,7 +99,7 @@ def create_tornado_chart(findings_grouped):
         template='plotly_white',
         showlegend=True,
          legend=dict(
-            font=dict(size=25)  # Set the size of the legend text
+            font=dict(size=20)  # Set the size of the legend text
         ),
         height=600,
         margin=dict(l=30, r=30, t=30, b=30),  # Adjust margins if necessary
