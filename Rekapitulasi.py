@@ -13,7 +13,7 @@ st.set_page_config(
 )
 
 image_path = "logo.png"
-col1, col2 = st.columns([1, 2])
+col1, col2 = st.columns([1, 4])
 
 with col1:
     st.write("")  # Tambahkan teks kosong untuk memberi jarak
