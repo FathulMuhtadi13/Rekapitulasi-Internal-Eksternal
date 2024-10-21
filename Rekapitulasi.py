@@ -19,7 +19,7 @@ with col1:
     st.write("")  # Tambahkan teks kosong untuk memberi jarak
     if os.path.exists(image_path):
         # Set the width of the logo to a larger size (e.g., 200 pixels)
-        st.image(image_path, width=200)  # Adjust the width as needed
+        st.image(image_path, width=180)  # Adjust the width as needed
     else:
         st.error(f"File tidak ditemukan: {image_path}")
 
