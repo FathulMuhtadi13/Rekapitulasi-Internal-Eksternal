@@ -29,14 +29,13 @@ with col2:
             <h2 style='font-size:24px; margin: 0;'>
                 Monitoring Tindak Lanjut Audit ISO Internal & Eksternal
             </h2>
-            <h2 style='font-size:24px; margin-top: 10px;'>  <!-- Adjust this value for spacing -->
+            <h2 style='font-size:24px; margin-top: 0px;'>  <!-- No spacing between lines -->
                 Rekayasa Cakrawala Resources 2024
             </h2>
         </div>
         """, 
         unsafe_allow_html=True
     )
-
 # Function to load data from an Excel file
 def load_data(file):
     try:
