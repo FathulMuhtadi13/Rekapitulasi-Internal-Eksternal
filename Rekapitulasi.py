@@ -29,7 +29,7 @@ with col2:
             <h2 style='font-size:24px; margin: 0;'>
                 Monitoring Tindak Lanjut Audit ISO Internal & Eksternal
             </h2>
-            <h2 style='font-size:1px; margin-top: 1px;'>
+            <h2 style='font-size:24px; margin-top: 10px;'>  <!-- Adjust this value for spacing -->
                 Rekayasa Cakrawala Resources 2024
             </h2>
         </div>
