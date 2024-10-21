@@ -27,7 +27,7 @@ with col2:
     st.markdown(
         """
         <div style='display: flex; align-items: center; height: 100%;'>
-            <h2 style='font-size:32px; margin: 0;'>  <!-- Adjusted font size -->
+            <h2 style='font-size:30px; margin: 0;'>  <!-- Adjusted font size -->
                 Monitoring Tindak Lanjut Audit ISO Internal & Eksternal Rekayasa Cakrawala Resources 2024
             </h2>
         </div>
