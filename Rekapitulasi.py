@@ -92,7 +92,7 @@ def create_tornado_chart(findings_grouped):
         )
 
     fig.update_layout(
-        title=dict(text=f'Tornado Chart of Findings - Total Findings: {total_findings}', font=dict(size=25)),
+        title=dict(text=f'Tornado Chart of Findings - Total Findings: {total_findings}', font=dict(size=20)),
         xaxis_title='Count',
         yaxis_title='Finding Category',
         barmode='stack',
