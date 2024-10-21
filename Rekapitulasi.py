@@ -8,7 +8,7 @@ import xlsxwriter
 import os
 
 st.set_page_config(
-    page_title="Monitoring Tindak Lanjut Audit ISO Internal & Eksternal - Rekayasa Cakrawala Resources 2024",
+    page_title="Monitoring Tindak Lanjut Audit ISO In. & Eks. RECARE 2024",
     layout="wide"
 )
 
@@ -25,18 +25,14 @@ with col1:
 with col2:
     st.markdown(
         """
-        <div style='display: flex; flex-direction: column; justify-content: center; height: 100%;'>
+        <div style='display: flex; align-items: center; height: 100%; margin-top: 20px;'>
             <h2 style='font-size:24px; margin: 0;'>
-                Monitoring Tindak Lanjut Audit ISO Internal & Eksternal
-            </h2>
-            <h2 style='font-size:24px; margin: 0;'>
-                Rekayasa Cakrawala Resources 2024
+                Monitoring Tindak Lanjut Audit ISO In. & Eks. RECARE 2024
             </h2>
         </div>
         """, 
         unsafe_allow_html=True
     )
-
 # Function to load data from an Excel file
 def load_data(file):
     try:
