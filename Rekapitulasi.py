@@ -18,7 +18,8 @@ col1, col2 = st.columns([1, 5])
 with col1:
     st.write("")  # Tambahkan teks kosong untuk memberi jarak
     if os.path.exists(image_path):
-        st.image(image_path, use_column_width=True)
+        # Set the width of the logo to a larger size (e.g., 200 pixels)
+        st.image(image_path, width=200)  # Adjust the width as needed
     else:
         st.error(f"File tidak ditemukan: {image_path}")
 
@@ -33,6 +34,7 @@ with col2:
         """, 
         unsafe_allow_html=True
     )
+    
 # Function to load data from an Excel file
 def load_data(file):
     try:
