@@ -7,35 +7,53 @@ import io
 import xlsxwriter
 import os
 
+# Set page configuration
 st.set_page_config(
     page_title="Monitoring Tindak Lanjut Audit ISO Internal & Eksternal - Rekayasa Cakrawala Resources 2024",
     layout="wide"
 )
 
-image_path = "logo.png"
-col1, col2 = st.columns([1, 5])
+# Upload Excel file
+uploaded_file = st.file_uploader("Upload your Excel file", type=["xlsx"])
 
-with col1:
-    st.write("")  # Add an empty space for padding
-    if os.path.exists(image_path):
-        st.image(image_path, use_column_width=True)
-    else:
-        st.error(f"File tidak ditemukan: {image_path}")
+if uploaded_file is not None:
+    try:
+        # Read the Excel file
+        df = pd.read_excel(uploaded_file)
 
-with col2:
-    st.markdown(
-        """
-        <div style='display: flex; flex-direction: column; justify-content: flex-start; height: 100%;'>
-            <h2 style='font-size:24px; margin: 0;'>
-                Monitoring Tindak Lanjut Audit ISO Internal & Eksternal
-            </h2>
-            <h2 style='font-size:24px; margin-top: 0px;'>  <!-- No spacing between lines -->
-                Rekayasa Cakrawala Resources 2024
-            </h2>
-        </div>
-        """, 
-        unsafe_allow_html=True
-    )
+        # Display the DataFrame (optional)
+        st.write("Data from the Excel file:")
+        st.dataframe(df)
+
+        # Only display the title if the file is successfully read
+        image_path = "logo.png"
+        col1, col2 = st.columns([1, 5])
+
+        with col1:
+            st.write("")  # Add an empty space for padding
+            if os.path.exists(image_path):
+                st.image(image_path, use_column_width=True)
+            else:
+                st.error(f"File tidak ditemukan: {image_path}")
+
+        with col2:
+            st.markdown(
+                """
+                <div style='display: flex; flex-direction: column; justify-content: flex-start; height: 100%;'>
+                    <h2 style='font-size:24px; margin: 0;'>
+                        Monitoring Tindak Lanjut Audit ISO Internal & Eksternal
+                    </h2>
+                    <h2 style='font-size:24px; margin-top: 0px;'>  <!-- No spacing between lines -->
+                        Rekayasa Cakrawala Resources 2024
+                    </h2>
+                </div>
+                """, 
+                unsafe_allow_html=True
+            )
+
+    except Exception as e:
+        st.error(f"Error reading the Excel file: {e}")
+
 # Function to load data from an Excel file
 def load_data(file):
     try:
