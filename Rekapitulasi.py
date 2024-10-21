@@ -16,7 +16,7 @@ image_path = "logo.png"
 col1, col2 = st.columns([1, 5])
 
 with col1:
-    st.write("")  # Tambahkan teks kosong untuk memberi jarak
+    st.write("")  # Add an empty space for padding
     if os.path.exists(image_path):
         st.image(image_path, use_column_width=True)
     else:
@@ -25,18 +25,18 @@ with col1:
 with col2:
     st.markdown(
         """
-        <div style='display: flex; flex-direction: column; justify-content: center; height: 100%;'>
+        <div style='display: flex; flex-direction: column; justify-content: flex-start; height: 100%;'>
             <h2 style='font-size:24px; margin: 0;'>
                 Monitoring Tindak Lanjut Audit ISO Internal & Eksternal
             </h2>
-            <h2 style='font-size:24px; margin: 0;'>
+            <h2 style='font-size:24px; margin-top: 5px;'>
                 Rekayasa Cakrawala Resources 2024
             </h2>
         </div>
         """, 
         unsafe_allow_html=True
     )
-    
+
 # Function to load data from an Excel file
 def load_data(file):
     try:
