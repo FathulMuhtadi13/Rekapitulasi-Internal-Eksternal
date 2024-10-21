@@ -28,7 +28,9 @@ with col2:
         <div style='display: flex; flex-direction: column; justify-content: flex-start; height: 100%;'>
             <h2 style='font-size:24px; margin: 0;'>
                 Monitoring Tindak Lanjut Audit ISO Internal & Eksternal
-                                  Rekayasa Cakrawala Resources 2024
+            </h2>
+            <h2 style='font-size:24px; margin-top: 5px;'>
+                Rekayasa Cakrawala Resources 2024
             </h2>
         </div>
         """, 
