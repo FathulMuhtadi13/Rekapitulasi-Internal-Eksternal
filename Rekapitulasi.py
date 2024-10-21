@@ -7,6 +7,11 @@ import io
 import xlsxwriter
 import os
 
+st.set_page_config(
+    page_title="Monitoring Tindak Lanjut Audit ISO Internal & Eksternal - Rekayasa Cakrawala Resources 2024",
+    layout="wide"
+)
+
 image_path = "logo.png"
 col1, col2 = st.columns([1, 5])
 
