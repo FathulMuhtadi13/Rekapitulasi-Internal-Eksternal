@@ -8,7 +8,7 @@ import xlsxwriter
 import os
 
 st.set_page_config(
-    page_title="Monitoring Tindak Lanjut Audit ISO Internal & Eksternal RECARE 2024",
+    page_title="Monitoring Tindak Lanjut Audit ISO In. & Eks. RECARE 2024",
     layout="wide"
 )
 
@@ -26,8 +26,8 @@ with col2:
     st.markdown(
         """
         <div style='display: flex; align-items: center; height: 100%;'>
-            <h2 style='font-size:24px; margin: 0;'>
-                Monitoring Tindak Lanjut Audit ISO Internal & Eksternal RECARE 2024
+            <h2 style='font-size:32px; margin: 0;'>  <!-- Adjusted font size -->
+                Monitoring Tindak Lanjut Audit ISO In. & Eks. RECARE 2024
             </h2>
         </div>
         """, 
